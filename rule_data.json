@@ -1,0 +1,45 @@
+{
+  "name": "Test Rule Demo",
+  "pattern_severity": "high",
+  "rulegroup_id": "20c7ee33459348c9b616f6393e1b01c7",
+  "comment": "",
+  "description": "Test Description",
+  "disposition_id": 30,
+  "ruletype_id": "9",
+  "field_values": [
+      {
+          "final_value": "(?i)99\\.99\\.99\\.99",
+          "label": "Remote IP Address",
+          "name": "RemoteIPAddress",
+          "type": "excludable",
+          "value": "(?i)99\\.99\\.99\\.99",
+          "values": [
+              {
+                  "label": "include",
+                  "value": "99\\.99\\.99\\.99"
+              }
+          ]
+      },
+      {
+          "final_value": "(?i:TCP|UDP|ICMP)",
+          "label": "Connection Type",
+          "name": "ConnectionType",
+          "type": "set",
+          "value": "(?i:TCP|UDP|ICMP)",
+          "values": [
+              {
+                  "label": "TCP",
+                  "value": "TCP"
+              },
+              {
+                  "label": "UDP",
+                  "value": "UDP"
+              },
+              {
+                  "label": "ICMP (Ping)",
+                  "value": "ICMP"
+              }              
+          ]
+      }
+  ]
+}
